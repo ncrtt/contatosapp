@@ -9,6 +9,8 @@ class Contato extends StatefulWidget {
   State<Contato> createState() => _ContatoState();
 }
 
+final tecNome = TextEditingController();
+
 class _ContatoState extends State<Contato> {
 
    @override
@@ -20,6 +22,20 @@ class _ContatoState extends State<Contato> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  TextFormField(
+                 controller: tecNome,
+                 autofocus: true,
+                 decoration: InputDecoration(
+                   isDense: true,
+                   hintText: "Nome",
+                   label: Text("Nome"),
+                   border: OutlineInputBorder(
+                     borderRadius: BorderRadius.circular(5),
+                   )
+                 ),
+                   maxLines: 1,
+                   maxLength: 50,
+               ),
                   Text('Primeira Página'),
                   ElevatedButton(onPressed: (){
                     //Navigator.of(context).push(MaterialPageRoute(builder: (_) =>  ConsultaContato()));
