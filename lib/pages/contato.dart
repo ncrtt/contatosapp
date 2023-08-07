@@ -10,6 +10,7 @@ class Contato extends StatefulWidget {
 }
 
 final tecNome = TextEditingController();
+String nome = '';
 
 class _ContatoState extends State<Contato> {
 
@@ -41,7 +42,9 @@ class _ContatoState extends State<Contato> {
                     //Navigator.of(context).push(MaterialPageRoute(builder: (_) =>  ConsultaContato()));
                     Navigator.of(context).pushNamed('/consulta');
                   }, child: Text('Ir para pagina 2'),),
-              ],)
+              ],
+
+              )
             ),
            ),
        );
